@@ -5,11 +5,9 @@
   --black-color: #000000;
   --gap: 6rem;
 }
-
 /*
 font-family: 'Josefin Sans', sans-serif;
 font-family: 'Noto Serif', serif;
-
 */
 
 * {
@@ -24,7 +22,7 @@ html {
 }
 
 body {
-  font-size: 2rem;
+  font-size: 1rem;
   font-family: "Noto Serif", serif;
 }
 
@@ -37,33 +35,23 @@ h6 {
   font-family: "Josefin Sans", sans-serif;
 }
 
-.section-ajuste {
-  height: 100vh;
+h1.after {
+  margin-bottom: 0.5rem;
+  color: var(--blue-color);
 }
 
-.centralizador {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.menutop {
-  width: 100%;
-  padding: 10px;
-  background: rgba(255, 255, 255, 0.5);
-  border-bottom: solid 2px var(--blue-color);
-  z-index: 1;
-  backdrop-filter: blur(10px);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-.menubar {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+h1.after::after {
+  content: "!";
+  margin-left: 0.5rem;
+  opacity: 1;
+  animation-duration: 1.7s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: pisca;
 }
 
 span {
@@ -71,19 +59,42 @@ span {
   font-family: "Josefin Sans", sans-serif;
 }
 
+p span {
+  font-size: 3.5rem;
+}
+
+p span::after {
+  content: "|";
+  margin-left: 0.5rem;
+  opacity: 1;
+  animation-duration: 1.7s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: pisca;
+}
+
 aside > a {
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-family: "Josefin Sans", sans-serif;
-  color: var(--color1);
+  color: var(--black-color);
   text-transform: lowercase;
   font-weight: bold;
+  transition: color 1s ease;
+}
+
+aside > a:hover {
+  color: var(--blue-color);
 }
 
 aside > a::after {
   content: "";
   position: absolute;
   bottom: 1rem;
-  left: 6%;
+  left: 1%;
   width: 0;
   height: 0.2rem;
   background: var(--blue-color);
@@ -91,7 +102,7 @@ aside > a::after {
 }
 
 aside a:hover::after {
-  width: 22%;
+  width: 20%;
 }
 
 nav {
@@ -99,12 +110,17 @@ nav {
 }
 
 nav a {
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-family: "Josefin Sans", sans-serif;
-  color: var(--color1);
+  color: var(--black-color);
   text-transform: capitalize;
   font-weight: bold;
   position: relative;
+  transition: color 1s ease;
+}
+
+nav a:hover {
+  color: var(--blue-color);
 }
 
 nav a::after {
@@ -131,22 +147,43 @@ nav ul {
   flex-wrap: wrap;
 }
 
-#inicio {
-  z-index: 5;
+.section-ajuste {
+  height: 100vh;
 }
 
-#sobremim {
-  z-index: 4;
+.centralizador {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.menutop {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-bottom: solid 0.2rem var(--blue-color);
+  z-index: 1;
+  backdrop-filter: blur(1rem);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.menubar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .section-black {
   min-height: 100vh;
-  box-shadow: 0px -5px 4px rgba(255, 0, 0, 0.5);
+  box-shadow: 0px -0.5rem 0.4rem rgba(255, 0, 0, 0.5);
 }
 
 .section-grey {
   min-height: 100vh;
-  box-shadow: 0px -10px 5px var(--grey-color);
+  box-shadow: 0px -1rem 0.5rem var(--grey-color);
 }
 
 .main-bg {
@@ -163,4 +200,32 @@ nav ul {
 
 .main-content {
   padding: var(--gap);
+}
+
+.separador {
+  max-width: 51rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.apresentacao {
+  max-width: 70rem;
+}
+
+.meio-pagina {
+  display: block;
+  padding-top: 7rem;
+}
+
+@keyframes pisca {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
