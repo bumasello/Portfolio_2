@@ -1,5 +1,5 @@
 :root {
-  --grey-color: #3b3b3b;
+  --grey-color: #050505;
   --white-color: #ffffff;
   --blue-color: #00a2a7;
   --black-color: #000000;
@@ -56,7 +56,7 @@ h1.after::after {
 
 span {
   color: var(--blue-color);
-  font-family: "Josefin Sans", sans-serif;
+  /* font-family: "Josefin Sans", sans-serif; */
 }
 
 p span {
@@ -78,7 +78,7 @@ p span::after {
 }
 
 aside > a {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: "Josefin Sans", sans-serif;
   color: var(--black-color);
   text-transform: lowercase;
@@ -93,7 +93,7 @@ aside > a:hover {
 aside > a::after {
   content: "";
   position: absolute;
-  bottom: 1rem;
+  bottom: 0.2rem;
   left: 1%;
   width: 0;
   height: 0.2rem;
@@ -102,7 +102,7 @@ aside > a::after {
 }
 
 aside a:hover::after {
-  width: 20%;
+  width: 12%;
 }
 
 nav {
@@ -110,7 +110,7 @@ nav {
 }
 
 nav a {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-family: "Josefin Sans", sans-serif;
   color: var(--black-color);
   text-transform: capitalize;
@@ -158,7 +158,7 @@ nav ul {
 
 .menutop {
   width: 100%;
-  padding: 1rem;
+  padding: 0.4rem;
   background: rgba(255, 255, 255, 0.2);
   border-bottom: solid 0.2rem var(--blue-color);
   z-index: 1;
@@ -183,7 +183,7 @@ nav ul {
 
 .section-grey {
   min-height: 100vh;
-  box-shadow: 0px -1rem 0.5rem var(--grey-color);
+  /* box-shadow: 0px -1rem 0.5rem var(--grey-color); */
 }
 
 .main-bg {
@@ -194,7 +194,7 @@ nav ul {
 }
 
 .main-bg-2 {
-  background: var(--grey-color);
+  background-color: #050505;
   color: var(--white-color);
 }
 
