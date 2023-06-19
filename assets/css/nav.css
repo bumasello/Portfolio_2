@@ -105,6 +105,21 @@ aside a:hover::after {
   width: 12%;
 }
 
+div h1::after {
+  content: "!";
+  margin-left: 0.5rem;
+  opacity: 1;
+  animation-duration: 1.7s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: pisca;
+  color: #00a2a7;
+}
+
 nav {
   width: 50%;
 }
@@ -217,6 +232,43 @@ nav ul {
 .meio-pagina {
   display: block;
   padding-top: 7rem;
+}
+
+.central-sec-2 {
+  max-width: 120rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+div.centralizador > div.pop-out {
+  justify-content: center;
+}
+
+.pop-out {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #00a2a7;
+  border-radius: 5px;
+  height: 100vh;
+  max-width: 500px;
+  box-shadow: 0 0 10px #00a2a7;
+}
+
+div.pop-out div h1 {
+  margin-top: 15px;
+  font-size: 3.5rem;
+  display: flex;
+  justify-content: center;
+  height: 30%;
+  padding: 30px;
+}
+
+.content-popout {
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 @keyframes pisca {
