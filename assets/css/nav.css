@@ -5,6 +5,26 @@
   --black-color: #000000;
   --gap: 6rem;
 }
+/* Estilizando a barra de rolagem */
+::-webkit-scrollbar {
+  width: 12px; /* Largura da barra de rolagem */
+}
+
+/* Estilizando o fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+  background-color: #555;
+}
+
+/* Estilizando o "polegar" da barra de rolagem */
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+}
+
+/* Mudando a cor do "polegar" quando o mouse estiver sobre a barra de rolagem */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #00a2a7;
+}
 
 /*
 font-family: 'Josefin Sans', sans-serif;
@@ -205,7 +225,6 @@ nav ul {
 
 .section-grey {
   min-height: 100vh;
-  /* box-shadow: 0px -1rem 0.5rem var(--grey-color); */
 }
 
 .main-bg {
@@ -216,7 +235,7 @@ nav ul {
 }
 
 .main-bg-2 {
-  background-color: #050505;
+  background-color: #000000;
   color: var(--white-color);
 }
 
