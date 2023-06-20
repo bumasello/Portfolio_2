@@ -5,6 +5,7 @@
   --black-color: #000000;
   --gap: 6rem;
 }
+
 /*
 font-family: 'Josefin Sans', sans-serif;
 font-family: 'Noto Serif', serif;
@@ -252,8 +253,8 @@ div.centralizador > div.pop-out {
 }
 
 .pop-out {
+  overflow: auto;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
   border: 0.1rem solid #00a2a7;
