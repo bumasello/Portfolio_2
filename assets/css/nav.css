@@ -1,5 +1,5 @@
 :root {
-  --grey-color: #050505;
+  --grey-color: #000000;
   --white-color: #ffffff;
   --blue-color: #00a2a7;
   --black-color: #000000;
@@ -72,6 +72,17 @@ h1.after {
   color: var(--blue-color);
 }
 
+h2 {
+  margin-top: 8rem;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  font-size: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 8rem;
+}
+
 h1.after::after {
   content: "!";
   margin-left: 0.5rem;
@@ -89,11 +100,11 @@ h1.after::after {
 span {
   color: var(--blue-color);
   font-family: "Noto Serif", serif;
-  letter-spacing: 1rem;
 }
 
 p span {
   font-size: 12rem;
+  letter-spacing: 1rem;
 }
 
 p span::after {
@@ -228,11 +239,6 @@ nav ul {
 
 .section-black {
   min-height: 100vh;
-  box-shadow: 0px -0.5rem 0.4rem rgba(255, 0, 0, 0.5);
-}
-
-.section-grey {
-  min-height: 100vh;
 }
 
 .main-bg {
@@ -307,6 +313,93 @@ div.pop-out div h1 {
   text-align: center;
   font-size: 2.9rem;
   font-family: "Josefin Sans", sans-serif;
+}
+
+.coluna {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+}
+
+.grid-item {
+  position: relative;
+  height: 24.3rem;
+  font-size: 3rem;
+  background-color: #000000;
+  border-radius: 1rem;
+  border: 0.1rem solid #00a2a7;
+  overflow: hidden;
+  transition: height 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item h3 {
+  text-align: center;
+  padding-top: 8.5rem;
+}
+
+.grid-item:hover {
+  height: 35rem;
+  box-shadow: 0 0 2rem #00a2a7;
+}
+
+.grid-item-content {
+  text-align: justify;
+  position: absolute;
+  top: 50%; /* Centraliza verticalmente o conteúdo */
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%); /* Centraliza verticalmente o conteúdo */
+  text-align: center; /* Centraliza horizontalmente o conteúdo */
+  opacity: 0; /* Oculta o conteúdo inicialmente */
+  transition: opacity 0.3s ease; /* Transição suave para a opacidade */
+}
+
+.grid-item:hover .grid-item-content {
+  padding-top: 15rem;
+  opacity: 1; /* Mostra o conteúdo ao passar o mouse */
+}
+
+.grid-item-content-x {
+  text-align: justify;
+  position: absolute;
+  top: 50%; /* Centraliza verticalmente o conteúdo */
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%); /* Centraliza verticalmente o conteúdo */
+  text-align: center; /* Centraliza horizontalmente o conteúdo */
+  opacity: 0; /* Oculta o conteúdo inicialmente */
+  transition: opacity 0.3s ease; /* Transição suave para a opacidade */
+}
+
+.grid-item:hover .grid-item-content-x {
+  padding-top: 12rem;
+  padding-bottom: 3rem;
+  opacity: 1; /* Mostra o conteúdo ao passar o mouse */
+}
+
+.grid-item-content-y {
+  text-align: justify;
+  position: absolute;
+  top: 50%; /* Centraliza verticalmente o conteúdo */
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%); /* Centraliza verticalmente o conteúdo */
+  text-align: center; /* Centraliza horizontalmente o conteúdo */
+  opacity: 0; /* Oculta o conteúdo inicialmente */
+  transition: opacity 0.3s ease; /* Transição suave para a opacidade */
+}
+
+.grid-item:hover .grid-item-content-y {
+  padding-top: 13rem;
+  padding-bottom: 2rem;
+  opacity: 1; /* Mostra o conteúdo ao passar o mouse */
 }
 
 @keyframes pisca {
