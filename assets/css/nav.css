@@ -45,6 +45,7 @@ html {
 body {
   font-size: 1rem;
   font-family: "Noto Serif", serif;
+  /* font-family: "Josefin Sans", sans-serif; */
 }
 
 h1,
@@ -57,6 +58,12 @@ h6 {
 }
 
 h1 {
+  font-size: 6rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+}
+
+p {
   font-size: 3rem;
 }
 
@@ -81,7 +88,8 @@ h1.after::after {
 
 span {
   color: var(--blue-color);
-  /* font-family: "Josefin Sans", sans-serif; */
+  font-family: "Noto Serif", serif;
+  letter-spacing: 1rem;
 }
 
 p span {
@@ -211,7 +219,7 @@ nav ul {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.235);
   backdrop-filter: blur(1rem);
   border-bottom: solid 0.2rem var(--blue-color);
   height: 3.5rem;
@@ -251,7 +259,7 @@ nav ul {
 }
 
 .apresentacao {
-  max-width: 150rem;
+  max-width: 120rem;
 }
 
 .meio-pagina {
@@ -296,7 +304,9 @@ div.pop-out div h1 {
 }
 
 .content-popout p {
-  font-size: 2.5rem;
+  text-align: center;
+  font-size: 2.9rem;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 @keyframes pisca {
