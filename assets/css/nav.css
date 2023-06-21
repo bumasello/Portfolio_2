@@ -350,23 +350,23 @@ div.pop-out div h1 {
 }
 
 .grid-item-content {
+  padding-top: 15rem;
   text-align: justify;
   position: absolute;
-  top: 50%; /* Centraliza verticalmente o conteúdo */
-  left: 0;
   width: 100%;
-  transform: translateY(-50%); /* Centraliza verticalmente o conteúdo */
-  text-align: center; /* Centraliza horizontalmente o conteúdo */
-  opacity: 0; /* Oculta o conteúdo inicialmente */
-  transition: opacity 0.3s ease; /* Transição suave para a opacidade */
+  transform: translateY(-50%);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
 .grid-item:hover .grid-item-content {
-  padding-top: 15rem;
   opacity: 1; /* Mostra o conteúdo ao passar o mouse */
 }
 
 .grid-item-content-x {
+  padding-top: 12rem;
+  padding-bottom: 3rem;
   text-align: justify;
   position: absolute;
   top: 50%; /* Centraliza verticalmente o conteúdo */
@@ -379,12 +379,12 @@ div.pop-out div h1 {
 }
 
 .grid-item:hover .grid-item-content-x {
-  padding-top: 12rem;
-  padding-bottom: 3rem;
   opacity: 1; /* Mostra o conteúdo ao passar o mouse */
 }
 
 .grid-item-content-y {
+  padding-top: 13rem;
+  padding-bottom: 2rem;
   text-align: justify;
   position: absolute;
   top: 50%; /* Centraliza verticalmente o conteúdo */
@@ -397,8 +397,6 @@ div.pop-out div h1 {
 }
 
 .grid-item:hover .grid-item-content-y {
-  padding-top: 13rem;
-  padding-bottom: 2rem;
   opacity: 1; /* Mostra o conteúdo ao passar o mouse */
 }
 
