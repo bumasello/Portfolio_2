@@ -1,5 +1,5 @@
 :root {
-  --grey-color: #000000;
+  --grey-color: #0f0f0f;
   --white-color: #ffffff;
   --blue-color: #00a2a7;
   --black-color: #000000;
@@ -238,6 +238,16 @@ nav ul {
 }
 
 .section-black {
+  border-top: solid 1px var(--blue-color);
+  min-height: 100vh;
+  background: var(--black-color);
+  color: var(--white-color);
+}
+
+.section-grey {
+  border-top: solid 1px var(--blue-color);
+  background: rgb(15, 15, 15);
+  color: var(--white-color);
   min-height: 100vh;
 }
 
@@ -245,11 +255,6 @@ nav ul {
   background-image: url("../img/endless-constellation.svg");
   background-size: auto;
   background-position: center center;
-  color: var(--white-color);
-}
-
-.main-bg-2 {
-  background-color: #000000;
   color: var(--white-color);
 }
 
@@ -286,6 +291,7 @@ div.centralizador > div.pop-out {
 }
 
 .pop-out {
+  background-color: #000000;
   overflow: auto;
   display: flex;
   flex-direction: column;
@@ -361,7 +367,7 @@ div.pop-out div h1 {
 }
 
 .grid-item:hover .grid-item-content {
-  opacity: 1; /* Mostra o conteúdo ao passar o mouse */
+  opacity: 1;
 }
 
 .grid-item-content-x {
@@ -369,17 +375,17 @@ div.pop-out div h1 {
   padding-bottom: 3rem;
   text-align: justify;
   position: absolute;
-  top: 50%; /* Centraliza verticalmente o conteúdo */
+  top: 50%;
   left: 0;
   width: 100%;
-  transform: translateY(-50%); /* Centraliza verticalmente o conteúdo */
-  text-align: center; /* Centraliza horizontalmente o conteúdo */
-  opacity: 0; /* Oculta o conteúdo inicialmente */
-  transition: opacity 0.3s ease; /* Transição suave para a opacidade */
+  transform: translateY(-50%);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .grid-item:hover .grid-item-content-x {
-  opacity: 1; /* Mostra o conteúdo ao passar o mouse */
+  opacity: 1;
 }
 
 .grid-item-content-y {
@@ -387,17 +393,17 @@ div.pop-out div h1 {
   padding-bottom: 2rem;
   text-align: justify;
   position: absolute;
-  top: 50%; /* Centraliza verticalmente o conteúdo */
+  top: 50%;
   left: 0;
   width: 100%;
-  transform: translateY(-50%); /* Centraliza verticalmente o conteúdo */
-  text-align: center; /* Centraliza horizontalmente o conteúdo */
-  opacity: 0; /* Oculta o conteúdo inicialmente */
-  transition: opacity 0.3s ease; /* Transição suave para a opacidade */
+  transform: translateY(-50%);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .grid-item:hover .grid-item-content-y {
-  opacity: 1; /* Mostra o conteúdo ao passar o mouse */
+  opacity: 1;
 }
 
 @keyframes pisca {
