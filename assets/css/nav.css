@@ -370,6 +370,19 @@ div.pop-out-grey div h1 {
     position: relative;
     height: 24.3rem;
     font-size: 3rem;
+    background-color: rgb(0, 0, 0);
+    border-radius: 1rem;
+    border: 0.1rem solid #00a2a7;
+    overflow: hidden;
+    transition:
+        height 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.grid-item-grey {
+    position: relative;
+    height: 24.3rem;
+    font-size: 3rem;
     background-color: rgb(15, 15, 15);
     border-radius: 1rem;
     border: 0.1rem solid #00a2a7;
@@ -395,6 +408,26 @@ div.pop-out-grey div h1 {
 }
 
 .grid-item:hover {
+    height: 35rem;
+    box-shadow: 0 0 2rem #00a2a7;
+}
+
+.grid-item-grey h3 {
+    text-align: center;
+    padding-top: 8.5rem;
+}
+
+.grid-item-grey a {
+    text-decoration: none;
+    color: var(--white-color);
+    transition: color 1s ease;
+}
+
+.grid-item-grey a:hover {
+    color: var(--blue-color);
+}
+
+.grid-item-grey:hover {
     height: 35rem;
     box-shadow: 0 0 2rem #00a2a7;
 }
@@ -426,6 +459,10 @@ div.pop-out-grey div h1 {
     opacity: 1;
 }
 
+.grid-item-grey:hover .grid-item-content {
+    opacity: 1;
+}
+
 .grid-item-content-x {
     padding-top: 12rem;
     padding-bottom: 3rem;
@@ -444,6 +481,10 @@ div.pop-out-grey div h1 {
     opacity: 1;
 }
 
+.grid-item-grey:hover .grid-item-content-x {
+    opacity: 1;
+}
+
 .grid-item-content-y {
     padding-top: 13rem;
     padding-bottom: 2rem;
@@ -459,6 +500,10 @@ div.pop-out-grey div h1 {
 }
 
 .grid-item:hover .grid-item-content-y {
+    opacity: 1;
+}
+
+.grid-item-grey:hover .grid-item-content-y {
     opacity: 1;
 }
 
@@ -640,6 +685,9 @@ body .full-width {
 .form-group ::placeholder {
     color: var(--grey-color);
 }
+.close-menu {
+    display: none;
+}
 
 @keyframes pisca {
     0% {
@@ -650,5 +698,70 @@ body .full-width {
     }
     100% {
         opacity: 1;
+    }
+}
+
+@media (max-width: 1015px) {
+    #inicio span,
+    #habilidades h2,
+    #projetos h2,
+    #contato h2 {
+        font-size: 8vw;
+    }
+    #inicio p {
+        font-size: 3vw;
+    }
+    #inicio i,
+    #inicio span::after,
+    #sobremim h1::after {
+        display: none;
+    }
+    .menutop,
+    .menubar {
+        height: 100%;
+    }
+    .menubar,
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .menutop {
+        display: none;
+    }
+
+    .close-menu-label::after {
+        content: '≡';
+        position: fixed;
+        z-index: 2;
+        top: 1rem;
+        right: 2rem;
+        color: var(--white-color);
+        font-size: 3rem;
+        line-height: 3rem;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        cursor: pointer;
+    }
+    .close-menu:checked ~ .menutop {
+        display: block;
+    }
+    .close-menu:checked ~ .close-menu-label::after {
+        content: '×';
+    }
+}
+
+@media (max-width: 850px) {
+    #habilidades div.grid-container,
+    #projetos div.grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 730px) {
+    #habilidades div.grid-container,
+    #projetos div.grid-container {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
