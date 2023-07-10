@@ -705,7 +705,8 @@ body .full-width {
     #inicio span,
     #habilidades h2,
     #projetos h2,
-    #contato h2 {
+    #contato h2,
+    #sobremim h2 {
         font-size: 8vw;
     }
     #inicio p {
@@ -763,5 +764,8 @@ body .full-width {
     #habilidades div.grid-container,
     #projetos div.grid-container {
         grid-template-columns: repeat(1, 1fr);
+    }
+    #habilidades div.grid-item-grey {
+        max-width: 28rem;
     }
 }
